@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="_log\**" />
+    <Compile Remove="_upload\**" />
+    <Content Remove="_log\**" />
+    <Content Remove="_upload\**" />
+    <EmbeddedResource Remove="_log\**" />
+    <EmbeddedResource Remove="_upload\**" />
+    <None Remove="_log\**" />
+    <None Remove="_upload\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\bootstrap-datepicker.css.map" />
+    <Content Remove="wwwroot\css\fonts\icomoon.svg" />
+    <Content Remove="wwwroot\css\lib\font\summernote.woff2" />
+    <Content Remove="wwwroot\css\summernote-bs4.js.map" />
+    <Content Remove="wwwroot\css\summernote-bs4.min.js.map" />
+    <Content Remove="wwwroot\css\view\_xg_block.css_old" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Error.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Login.cshtml" />
+    <None Include="Views\SetPwd\Index.cshtml" />
+    <None Include="wwwroot\css\bootstrap-datepicker.css.map" />
+    <None Include="wwwroot\css\fonts\icomoon.svg" />
+    <None Include="wwwroot\css\lib\font\summernote.woff2" />
+    <None Include="wwwroot\css\summernote-bs4.js.map" />
+    <None Include="wwwroot\css\summernote-bs4.min.js.map" />
+    <None Include="wwwroot\css\view\_xg_block.css_old" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base\BaseWeb\BaseWeb.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\Error.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_Layout.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_Top.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\lib.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Shared\NoProgAuth.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Shared\NoProgAuth.cshtml" />
+  </ItemGroup>
+
+</Project>
